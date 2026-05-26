@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BuiltSmart Hub | Verf&uuml;gbarkeitstafel</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="availability-board.css">
+  </head>
+  <body>
+    <main class="availability-shell" data-availability-shell>
+      <section
+        class="availability-panel"
+        aria-labelledby="availability-title"
+        aria-describedby="availability-copy"
+        data-availability-panel
+      >
+        <button
+          class="availability-close-icon"
+          type="button"
+          aria-label="Tafel schlie&szlig;en"
+          title="Schlie&szlig;en"
+          data-availability-close
+        >
+          &times;
+        </button>
+        <div class="availability-brand">
+          <img src="favicon.svg" alt="" aria-hidden="true">
+          <div>
+            <p>SmartBuilt-AI</p>
+            <span>powered by BuiltSmart Hub - Bernhard Metzger</span>
+          </div>
+        </div>
+        <h2 id="availability-title">
+          Unsere APP steht kurz vor der Fertigstellung.
+        </h2>
+
+        <div id="availability-copy" class="availability-copy">
+          <p>
+            Unsere App steht kurz vor dem Launch und befindet sich aktuell in
+            der finalen Testphase.
+          </p>
+          <p>
+            Wenn du informiert werden m&ouml;chtest, sobald sie erh&auml;ltlich
+            ist, schreib uns einfach kurz, welche App dich interessiert.
+          </p>
+          <p>
+            Wir geben dir Bescheid, sobald der Kaufbereich aktiv ist.
+          </p>
+        </div>
+
+        <div class="availability-select-field" data-availability-app-group>
+          <p class="availability-select-title">Apps ausw&auml;hlen</p>
+          <div class="availability-app-list" id="availability-app-list" data-availability-app-list>
+            <p class="availability-app-group-title">Risiko-, Vertrags- &amp; Compliance-Management</p>
+            <label><input type="checkbox" value="SMART RISK Vertragsanalyse" data-availability-app-option> SMART RISK Vertragsanalyse</label>
+            <label><input type="checkbox" value="SMART RISK Risiko-Register" data-availability-app-option> SMART RISK Risiko-Register</label>
+            <label><input type="checkbox" value="SMART REVISION" data-availability-app-option> SMART REVISION</label>
+            <label><input type="checkbox" value="SMART Validate" data-availability-app-option> SMART Validate</label>
+
+            <p class="availability-app-group-title">Wissenssysteme &amp; Content Intelligence</p>
+            <label><input type="checkbox" value="SMART SnippetFlow" data-availability-app-option> SMART SnippetFlow</label>
+            <label><input type="checkbox" value="SMART PromptCreator" data-availability-app-option> SMART PromptCreator</label>
+            <label><input type="checkbox" value="SMART SummaryAssistent" data-availability-app-option> SMART SummaryAssistent</label>
+            <label><input type="checkbox" value="SMART ReplySuite" data-availability-app-option> SMART ReplySuite</label>
+
+            <p class="availability-app-group-title">Projektsteuerung &amp; Prognose</p>
+            <label><input type="checkbox" value="SMART COST PERT-Prognose" data-availability-app-option> SMART COST PERT-Prognose</label>
+            <label><input type="checkbox" value="SMART RISK Monte-Carlo-Simulation" data-availability-app-option> SMART RISK Monte-Carlo-Simulation</label>
+            <label><input type="checkbox" value="SMART CapEx" data-availability-app-option> SMART CapEx</label>
+
+            <p class="availability-app-group-title">Kommunikation &amp; Entscheidungsunterst&uuml;tzung</p>
+            <label><input type="checkbox" value="SMART Meeting Navigator" data-availability-app-option> SMART Meeting Navigator</label>
+
+            <p class="availability-app-group-title">Karriere &amp; Entwicklung</p>
+            <label><input type="checkbox" value="SMART Career Navigator" data-availability-app-option> SMART Career Navigator</label>
+
+            <p class="availability-app-group-title">Produktivit&auml;t &amp; Workflow Intelligence</p>
+            <label><input type="checkbox" value="SMART Focus" data-availability-app-option> SMART Focus</label>
+          </div>
+        </div>
+
+        <div class="availability-actions">
+          <a
+            class="availability-primary"
+            data-availability-mail
+            aria-disabled="true"
+            href="mailto:Info@built-smart-hub.com?subject=Feedback%20zur%20Verf%C3%BCgbarkeit%20der%20SmartBuilt-AI%20Apps&body=Hallo%20BuiltSmart%20Hub%20Team%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20die%20SmartBuilt-AI%20App%20.........%20und%20bitte%20um%20eine%20R%C3%BCckmeldung%2C%20sobald%20der%20Kaufbereich%20aktiv%20ist.%0A%0AVielen%20Dank%20und%20freundliche%20Gr%C3%BC%C3%9Fe%0A"
+          >
+            Bei Verf&uuml;gbarkeit benachrichtigen
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+          <button class="availability-secondary" type="button" data-availability-close>
+            Schlie&szlig;en
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="availability-board.js?v=3"></script>
+  </body>
+</html>

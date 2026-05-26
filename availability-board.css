@@ -1,0 +1,254 @@
+:root {
+  color-scheme: light;
+  --availability-ink: #171717;
+  --availability-muted: #565656;
+  --availability-paper: transparent;
+  --availability-surface: rgba(32, 37, 34, 0.82);
+  --availability-border: rgba(23, 23, 23, 0.12);
+  --availability-accent: #336d86;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--availability-paper);
+  color: var(--availability-ink);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  letter-spacing: 0;
+}
+
+.availability-shell {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  background: rgba(15, 18, 17, 0.44);
+  backdrop-filter: blur(14px) saturate(1.05);
+  -webkit-backdrop-filter: blur(14px) saturate(1.05);
+  padding: 32px 18px;
+}
+
+.availability-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+}
+
+.availability-brand img {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  border-radius: 8px;
+}
+
+.availability-brand p {
+  margin: 0;
+  color: #9bd8ce;
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.availability-brand span {
+  display: block;
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.88rem;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.availability-primary,
+.availability-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  border-radius: 8px;
+  padding: 0 24px;
+  border: 1px solid transparent;
+  font: inherit;
+  font-size: 0.96rem;
+  font-weight: 750;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.availability-primary:hover {
+  background: #e8fff6;
+  color: var(--availability-ink);
+  transform: translateY(-1px);
+}
+
+.availability-panel {
+  position: relative;
+  width: min(620px, 100%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: var(--availability-surface);
+  backdrop-filter: blur(22px) saturate(1.12);
+  -webkit-backdrop-filter: blur(22px) saturate(1.12);
+  color: #fffdf8;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+  padding: 32px;
+  outline: none;
+}
+
+.availability-close-icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fffdf8;
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.35rem;
+  line-height: 1;
+  transition:
+    background-color 160ms ease,
+    transform 160ms ease;
+}
+
+.availability-close-icon:hover {
+  background: rgba(255, 255, 255, 0.14);
+  transform: translateY(-1px);
+}
+
+.availability-panel h2 {
+  margin: 18px 0 0;
+  color: #fffdf8;
+  font-size: clamp(1.85rem, 4vw, 2.45rem);
+  line-height: 1.12;
+}
+
+.availability-copy {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.08rem;
+  line-height: 1.58;
+}
+
+.availability-copy p {
+  margin: 0;
+}
+
+.availability-select-field {
+  display: grid;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.availability-select-title {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.92rem;
+  font-weight: 750;
+}
+
+.availability-app-list {
+  display: grid;
+  max-height: 260px;
+  overflow: auto;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+}
+
+.availability-app-list label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.88);
+  cursor: pointer;
+  font-size: 0.96rem;
+  font-weight: 650;
+  line-height: 1.35;
+  padding: 8px 6px;
+}
+
+.availability-app-list label:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.availability-app-list input {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 auto;
+  accent-color: #9bd8ce;
+}
+
+.availability-app-group-title {
+  margin: 12px 6px 4px;
+  color: #9bd8ce;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.availability-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.availability-primary {
+  gap: 12px;
+  background: #fffdf8;
+  color: var(--availability-ink);
+}
+
+.availability-primary[aria-disabled="true"] {
+  opacity: 0.56;
+  pointer-events: none;
+}
+
+.availability-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #fffdf8;
+}
+
+.availability-secondary:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.availability-shell.is-hidden,
+.availability-panel.is-hidden {
+  display: none;
+}
+
+@media (max-width: 620px) {
+  .availability-panel {
+    padding: 26px 20px 22px;
+  }
+
+  .availability-brand {
+    padding-right: 46px;
+  }
+
+  .availability-actions {
+    grid-template-columns: 1fr;
+  }
+}
