@@ -4,6 +4,25 @@
   const appOptions = document.querySelectorAll("[data-availability-app-option]");
   const closeButtons = document.querySelectorAll("[data-availability-close]");
   const mailLink = document.querySelector("[data-availability-mail]");
+  const params = new URLSearchParams(window.location.search);
+  const returnUrl = params.get("return");
+
+  const getSafeReturnUrl = () => {
+    if (!returnUrl) {
+      return "";
+    }
+
+    try {
+      const url = new URL(returnUrl, window.location.href);
+      if (url.protocol === "https:" || url.protocol === "http:" || url.protocol === "file:") {
+        return url.href;
+      }
+    } catch {
+      return "";
+    }
+
+    return "";
+  };
 
   const createMailHref = (appNames) => {
     const subject = "Feedback zur Verf\u00fcgbarkeit der SmartBuilt-AI Apps";
@@ -58,6 +77,12 @@
 
   if (panel && closeButtons.length > 0) {
     const closePanel = () => {
+      const safeReturnUrl = getSafeReturnUrl();
+      if (safeReturnUrl) {
+        window.location.href = safeReturnUrl;
+        return;
+      }
+
       if (window.history.length > 1 && document.referrer) {
         window.history.back();
         return;
